@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+	<script src="https://kit.fontawesome.com/5197a2f084.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.list-type{
+			list-style: none;
+			font-size: 3rem;
+		}
+	</style>
+	<script type="text/javascript">
+		function todo(){
+	 let newTodo=document.getElementById("newTodo").value
+	 document.getElementById("newTodo").value=""
+	 if (newTodo==="") {
+	 	alert("enter  todo")
+	 }
+       else{
+	 addTodo(newTodo)
+	}
+}
+
+	function addTodo(newvalue){
+
+		const d=new Date;
+
+		let ul=document.querySelector("ul")
+		//console.log(ul)
+		let li=document.createElement("li")
+		li.innerHTML=`
+		<span class="listitem">${newvalue}${d.getHours()}:${d.getMinutes()}</span>
+		<i class="fa-solid
+		fa-rectangle-xmark"></i>
+		  <button name="deleteButton" ><i class="fas fa-trash"></i></button>
+		`;
+		li.classList.add("list-type")
+		ul.appendChild(li)
+
+
+	}
+	</script>
+	<style type="text/css">
+		#newTodo{
+			background-color:whitesmoke;
+			padding: 2%;
+			margin-left: 40%;
+
+		}
+		#vasu{
+			color: blue;
+			background-color: deeppink;
+			background-image: url()
+
+
+		}
+		#chitti{
+			margin-left: 40%;
+		}
+
+	</style>
+</head>
+<body>
+     <input id="newTodo" placeholder="Enter todo">
+     	<ul id="vasu">
+		
+	</ul>
+     <button onclick="todo()" id="chitti">submit</button>
+</body>
+</html>
